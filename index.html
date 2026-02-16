@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Lore Studios - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
+            color: #d4af37;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px;
+        }
+        
+        .logo {
+            max-width: 400px;
+            width: 90%;
+            margin: 0 auto 40px;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            color: #e6c045;
+        }
+        
+        .description {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #c9c9c9;
+        }
+        
+        .cta {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #d4af37;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta:hover {
+            background: #e6c045;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        .email-signup {
+            margin-top: 60px;
+        }
+        
+        .email-signup input {
+            padding: 12px 20px;
+            font-size: 1em;
+            border: 2px solid #d4af37;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            border-radius: 5px 0 0 5px;
+            width: 300px;
+            max-width: 60%;
+        }
+        
+        .email-signup button {
+            padding: 12px 30px;
+            font-size: 1em;
+            border: 2px solid #d4af37;
+            background: #d4af37;
+            color: #1a1a1a;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .email-signup button:hover {
+            background: #e6c045;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .subtitle {
+                font-size: 1.2em;
+            }
+            .description {
+                font-size: 1em;
+            }
+            .email-signup input {
+                width: 100%;
+                max-width: 100%;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .email-signup button {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/Mythic_Lore_Logo.jpg" alt="Mythic Lore Studios" class="logo">
+        
+        <h1>Coming Soon</h1>
+        
+        <p class="subtitle">An Epic Adventure Awaits</p>
+        
+        <p class="description">
+            Mythic Lore Studios is crafting an immersive AI-powered fantasy adventure. 
+            Explore dungeons, battle monsters, and shape your own legend with dynamic 
+            storytelling that adapts to your choices.
+        </p>
+        
+        <!-- Uncomment when beta is ready -->
+        <!-- <a href="/beta" class="cta">Join the Beta</a> -->
+        
+        <div class="email-signup">
+            <form id="signup-form">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Notify Me</button>
+            </form>
+            <p style="color: #888; font-size: 0.9em; margin-top: 10px;">
+                Be the first to know when we launch
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            alert('Thanks for your interest! We\'ll notify you at ' + email);
+            // TODO: Add actual email collection backend
+        });
+    </script>
+</body>
+</html>
+```
